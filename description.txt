@@ -1,0 +1,66 @@
+Ever wanted to be constantly afraid during your playthroughs? Well fear not, as this mod makes every boss spawn naturally under certain conditions, just like how the Eye of Cthulhu or the Mechanical Bosses do in vanilla.
+
+Works with vanilla, calamity, and thorium bosses!
+
+If you encounter any issues with this mod, please tell me by joining my discord server at https://discord.gg/ZdNzyEg
+
+~~ Conditions ~~  
+(If you don't want to be spoiled on when the bosses are going to spawn, don't read this portion)
+
+(By default, bosses cannot spawn naturally once they have been defeated)
+
+All conditions can be modified in the config of this mod if desired.
+
+King Slime: if the player has more than 8 defense, 120 max hp, has a 33% chance to spawn at 4:30 am
+Eye of Cthulhu: Vanilla
+Eater of Worlds/Brain of Cthulhu: if the player has more than 12 defense, 240 max hp, has killed the Eye of Cthulhu: has a 33% chance to spawn every minute while in the Corruption/Crimson
+Queen Bee: if the player has more than 15 defense, 280 max hp, has killed Eater of Worlds/Brain of Cthulhu: has a 33% chance to spawn every minute while in the Jungle
+Skeletron: if the player has more than 15 defense, 300 max hp, has killed Eater of Worlds/Brain of Cthulhu: has a 33% chance to spawn at 7:30 pm
+Deerclops: if the player has more than 15 defense, 330 max hp, has killed Skeletron: has a 33% chance to spawn every minute while in the Tundra
+Wall of Flesh: if the player has more than 20 defense, 360 max hp, has killed Skeletron: has a 33% chance to spawn every minute while in Hell
+Queen Slime: if the player has more than 25 defense, 360 max hp, has killed the Wall of Flesh: has a 33% chance to spawn every minute while in the Hallow
+Mechanical Bosses: Vanilla
+Duke Fishron: if the player has more than 30 defense, 405 max hp, has killed all Mechanical Bosses: has a 33% chance to spawn every minute while in the Ocean
+Plantera: if the player has more than 30 defense, 405 max hp, has killed all Mechanical Bosses: has a 33% chance to spawn every minute while in the Jungle
+Golem: if the player has more than 35 defense, 425 max hp, has killed Plantera: has a 33% chance to spawn every minute while in the Jungle
+Empress of Light: if the player has more than 35 defense, 430 max hp, has killed Golem: has a 33% chance to spawn at 7:30 pm or 4:30 am while in the Hallow
+Lunatic Cultist: if the player has more than 40 defense, 440 max hp, has killed Golem: has a 33% chance to spawn every minute
+Moon Lord: if the player has more than 40 defense, 450 max hp, has killed Lunatic Cultist: has a 33% chance to spawn every minute as long as the Lunar Events are not going on
+
+Calamity:
+Desert Scourge: if the player has more than 10 defense, 200 max hp, has killed King Slime: has a 33% chance to spawn every minute while in the Desert
+Crabulon: if the player has more than 10 defense, 210 max hp, has killed Eye of Cthulhu: has a 33% chance to spawn every minute while in the Mushroom Biome
+Hive Mind/Perforators: if the player has more than 13 defense, 250 max hp, has killed Eater of Worlds/Brain of Cthulhu: has a 33% chance to spawn every minute while in the Corruption/Crimson
+Slime God: if the player has more than 17 defense, 340 max hp, has killed Skeletron: has a 33% chance to spawn every minute
+Cryogen: if the player has more than 25 defense, 380 max hp, has killed Wall of Flesh: has a 33% chance to spawn every minute while in the Tundra
+Aquatic Scourge: if the player has more than 25 defense, 390 max hp, has killed a Mechanical Boss: has a 33% chance to spawn every minute while in the Sulfur Sea
+Brimstone Elemental: if the player has more than 25 defense, 400 max hp, has killed a Mechanical Boss: has a 33% chance to spawn every minute while in the Brimstone Crags
+Calamitas: if the player has more than 30 defense, 405 max hp, has killed all Mechanical Bosses: has a 33% chance to spawn at 7:30 pm
+Leviathan and Anahita: if the player has more than 35 defense, 425 max hp, has killed Plantera: has a 33% chance to spawn every minute while in the Ocean
+Astrum Aureus: if the player has more than 35 defense, 425 max hp, has killed Plantera: has a 33% chance to spawn every minute while in the Astral Infection
+Plaguebringer Goliath: if the player has more than 35 defense, 430 max hp, has killed Golem: has a 33% chance to spawn every minute while in the Jungle
+Ravager: if the player has more than 35 defense, 435 max hp, has killed Golem: has a 33% chance to spawn every minute
+Astrum Deus: if the player has more than 40 defense, 445 max hp, has killed Lunatic Cultist: has a 33% chance to spawn every minute while in the Astral Infection
+Profaned Guardians: if the player has more than 45 defense, 500 max hp, has killed Moon Lord: has a 33% chance to spawn every minute while in the Hallow or Hell
+Dragonfolly: if the player has more than 45 defense, 500 max hp, has killed Moon Lord: has a 33% chance to spawn every minute while in the Jungle
+Providence: if the player has more than 45 defense, 505 max hp, has killed Profaned Guardians: has a 33% chance to spawn every minute while in the Hallow or Hell
+Sentinels of the Devourer: if the player has more than 65 defense, 530 max hp, has killed Providence: has a 33% chance to spawn every minute while in the Dungeon (Ceaseless Void), Sky (Storm Weaver), or Hell (Signus)
+Polterghast: if the player has more than 65 defense, 555 max hp, has killed all Sentinels of the Devourer: has a 33% chance to spawn every minute while in the Dungeon
+Old Duke: if the player has more than 75 defense, 560 max hp, has killed Polterghast: has a 33% chance to spawn every minute while in the Sulfur Sea
+Devourer of Gods: if the player has more than 80 defense, 570 max hp, has killed Polterghast: has a 33% chance to spawn every minute
+Yharon: if the player has more than 90 defense, 575 max hp, has killed Devourer of Gods: has a 33% chance to spawn every minute while in the Jungle
+Exo Mechs: if the player has more than 100 defense, 600 max hp, has killed Yharon, SCal is not currently alive: has a 33% chance to spawn every minute
+Supreme Calamitas: if the player has more than 100 defense, 600 max hp, has killed Yharon, Exo Mechs are not currently alive: has a 33% chance to spawn every minute
+
+Thorium:
+The Grand Thunder Bird: if the player has more than 8 defense, 120 max hp, it is day time: has a 33% chance to spawn every minute while in the Desert
+Queen Jellyfish: if the player has more than 13 defense, 260 max hp, has killed Eater of Worlds/Brain of Cthulhu: has a 33% chance to spawn every minute while in the Ocean
+Viscount: if the player has more than 15 defense, 280 max hp, has killed Queen Jellyfish: has a 33% chance to spawn every minute while in the Caverns
+Granite Energy Storm: if the player has more than 17 defense, 340 max hp, has killed Skeletron: has a 33% chance to spawn every minute while in the Granite Caves
+Buried Champion: if the player has more than 17 defense, 340 max hp, has killed Skeletron: has a 33% chance to spawn every minute while in the Marble Caves
+Star Scouter: if the player has more than 18 defense, 350 max hp, has killed Granite Energy Storm or Buried Champion: has a 33% chance to spawn every minute while in the Sky
+Borean Strider: already spawns naturally in the Thorium mod
+Fallen Beholder: if the player has more than 23 defense, 380 max hp, has killed Borean Strider: has a 33% chance to spawn every minute while in the Underworld
+Lich: if the player has more than 28 defense, 405 max hp, has killed the Mechanical Bosses: has a 33% chance to spawn at 7:30 pm
+Forgotten One: if the player has more than 35 defense, 430 max hp, has killed Golem: has a 33% chance to spawn every minute while in the Aquatic Depths
+The Primordials: if the player has more than 55 defense, 480 max hp, has killed Moon Lord: has a 33% chance to spawn at 7:30 pm
