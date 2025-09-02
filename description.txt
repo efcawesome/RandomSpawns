@@ -2,10 +2,11 @@ Ever wanted to be constantly afraid during your playthroughs? Well fear not, as 
 
 Works with vanilla, calamity, and thorium bosses!
 
-If you encounter any issues with this mod, please tell me by joining my discord server at https://discord.gg/ZdNzyEg
+If you encounter any issues with this mod, please tell me by joining my discord server at [url=https://discord.gg/ZdNzyEg]https://discord.gg/ZdNzyEg[/url]
 
 By default, bosses cannot spawn naturally once they have been defeated.
 
 All conditions and some other settings can be modified in the config of this mod if desired.
 
-Click <a href="">this link</a> to see the specific conditions required for each boss to spawn.
+Click [url=https://github.com/efcawesome/RandomSpawns/blob/main/conditions.txt]this link[/url] to see the specific conditions required for each boss to spawn.[quote=tModLoader RandomSpawns]
+Developed By efcawesome[/quote]
