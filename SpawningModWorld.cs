@@ -75,11 +75,15 @@ namespace RandomSpawns
 		private bool spawnForgottenOne;
 		private bool spawnPrimordials;
 
+		private bool bossIsSpawning;
+
 		SpawnConfig spawnConfig = ModContent.GetInstance<SpawnConfig>();
 
 		// Called when the world loads
 		public override void OnWorldLoad()
 		{
+			bossIsSpawning = false;
+
 			spawnDict.Clear();
 			AddSpawn(NPCID.KingSlime);
 			AddSpawn(NPCID.EaterofWorldsHead);
@@ -209,11 +213,16 @@ namespace RandomSpawns
 			if (Main.time == 0.0 && Utils.NextBool(Main.rand, spawnConfig.spawnChance))
 			{
 				spawnEmpress = CheckSpawn(NPCID.HallowBoss, "Light is beginning to deform around you...", spawnEmpress);
+                spawnCultist = CheckSpawn(NPCID.CultistBoss, "The chanting from the dungeon becomes hurried...", spawnCultist);
+                spawnMoonLord = CheckSpawn(NPCID.MoonLordCore, "The lord of the moon awakens from his slumber...", spawnMoonLord);
 
-				if (calamity != null)
+                if (calamity != null)
 				{
 					spawnProvidence = CheckSpawn(calamity.Find<ModNPC>("Providence").Type, "A slumbering goddess becomes restless in search of a lost artifact...", spawnProvidence);
-				}
+                    spawnDOG = CheckSpawn(calamity.Find<ModNPC>("DevourerofGodsHead").Type, "The sky begins tearing to reveal a dimension filled with purple mist...", spawnDOG);
+                    spawnExoMechs = CheckSpawn(calamity.Find<ModNPC>("Draedon").Type, "The clanking of massive machines echoes in your ears...", spawnExoMechs);
+                    spawnSCal = CheckSpawn(calamity.Find<ModNPC>("SupremeCalamitas").Type, "The brimstone witch is coming...", spawnSCal);
+                }
 
 				if (Main.dayTime)
 				{
@@ -229,10 +238,12 @@ namespace RandomSpawns
 
 					if (calamity != null)
 					{
-						spawnCalamitas = CheckSpawn(calamity.Find<ModNPC>("CalamitasClone").Type, "Tonight is going to be a horrific night...", spawnCalamitas);
-						spawnAureus = CheckSpawn(calamity.Find<ModNPC>("AstrumAureus").Type, "The whir of an infected machine becomes loud...", spawnAureus);
+                        spawnSlimeGod = CheckSpawn(calamity.Find<ModNPC>("SlimeGodCore").Type, "Slimes around you begin behaving as though possessed...", spawnSlimeGod);
+                        spawnCalamitas = CheckSpawn(calamity.Find<ModNPC>("CalamitasClone").Type, "Tonight is going to be a horrific night...", spawnCalamitas);
+                        spawnAureus = CheckSpawn(calamity.Find<ModNPC>("AstrumAureus").Type, "The whir of an infected machine becomes loud...", spawnAureus);
+                        spawnRavager = CheckSpawn(calamity.Find<ModNPC>("RavagerBody").Type, "A magical bone golem becomes enraged in search of it's one true enemy...", spawnRavager);
 						spawnDeus = CheckSpawn(calamity.Find<ModNPC>("AstrumDeusHead").Type, "The fragments of the god of the stars begin to reform...", spawnDeus);
-					}
+                    }
 
 					if (thorium != null)
 					{
@@ -252,8 +263,6 @@ namespace RandomSpawns
 				spawnDukeFishron = CheckSpawn(NPCID.DukeFishron, "The squeal of a mutant creature eminates from deep underwater...", spawnDukeFishron);
 				spawnPlantera = CheckSpawn(NPCID.Plantera, "A planty amalgamation has become enraged...", spawnPlantera);
 				spawnGolem = CheckSpawn(NPCID.Golem, "The clanking of a sentient being from the temple grows loud...", spawnGolem);
-				spawnCultist = CheckSpawn(NPCID.CultistBoss, "The chanting from the dungeon becomes hurried...", spawnCultist);
-				spawnMoonLord = CheckSpawn(NPCID.MoonLordCore, "The lord of the moon awakens from his slumber...", spawnMoonLord);
 
 				if (calamity != null)
 				{
@@ -261,23 +270,18 @@ namespace RandomSpawns
 					spawnCrabulon = CheckSpawn(calamity.Find<ModNPC>("Crabulon").Type, "The clacking of mycelium claws can be heard nearby...", spawnCrabulon);
 					spawnHiveMind = CheckSpawn(calamity.Find<ModNPC>("HiveMind").Type, "Corrupted squelching can be heard deep from the chasms below...", spawnHiveMind);
 					spawnPerforators = CheckSpawn(calamity.Find<ModNPC>("PerforatorHive").Type, "The ground rumbles as ichor slowly seeps into the ground...", spawnPerforators);
-					spawnSlimeGod = CheckSpawn(calamity.Find<ModNPC>("SlimeGodCore").Type, "Slimes around you begin behaving as though possessed...", spawnSlimeGod);
 					spawnCryogen = CheckSpawn(calamity.Find<ModNPC>("Cryogen").Type, "The reflection of a huge icy structure can be seen growing closer...", spawnCryogen);
 					spawnAquaticScourge = CheckSpawn(calamity.Find<ModNPC>("AquaticScourgeHead").Type, "The acidic surface undulates by the movement of a massive unseen creature...", spawnAquaticScourge);
 					spawnBrimstoneElemental = CheckSpawn(calamity.Find<ModNPC>("BrimstoneElemental").Type, "The crags grow ever warmer as the smell of brimstone becomes strong...", spawnBrimstoneElemental);
 					spawnLeviathan = CheckSpawn(calamity.Find<ModNPC>("Anahita").Type, "The wail of an accursed goddess penetrates your head...", spawnLeviathan);
 					spawnPlaguebringer = CheckSpawn(calamity.Find<ModNPC>("PlaguebringerGoliath").Type, "The jets of a plagueridden machine can be heard faintly from far away...", spawnPlaguebringer);
-					spawnRavager = CheckSpawn(calamity.Find<ModNPC>("RavagerBody").Type, "A magical bone golem becomes enraged in search of it's one true enemy...", spawnRavager);
 					spawnDragonfolly = CheckSpawn(calamity.Find<ModNPC>("Bumblefuck").Type, "The beating of huge wings ruffles the foliage of nearby trees...", spawnDragonfolly);
 					spawnSignus = CheckSpawn(calamity.Find<ModNPC>("Signus").Type, "Shadows begin warping into strange shapes all around you...", spawnSignus);
 					spawnStormWeaver = CheckSpawn(calamity.Find<ModNPC>("StormWeaverHead").Type, "A young worm grows tired of hunting wyverns...", spawnStormWeaver);
 					spawnCeaselessVoid = CheckSpawn(calamity.Find<ModNPC>("CeaselessVoid").Type, "The room darkens as a being of void approaches...", spawnCeaselessVoid);
 					spawnPolterghast = CheckSpawn(calamity.Find<ModNPC>("Polterghast").Type, "The scraping of metal echoes off the dungeon walls...", spawnPolterghast);
 					spawnOldDuke = CheckSpawn(calamity.Find<ModNPC>("OldDuke").Type, "A stray bloodworm can be seen floating in the acid water...", spawnOldDuke);
-					spawnDOG = CheckSpawn(calamity.Find<ModNPC>("DevourerofGodsHead").Type, "The sky begins tearing to reveal a dimension filled with purple mist...", spawnDOG);
 					spawnYharon = CheckSpawn(calamity.Find<ModNPC>("Yharon").Type, "A rage-filled draconic roar penetrates through the thick jungle foliage...", spawnYharon);
-					spawnExoMechs = CheckSpawn(calamity.Find<ModNPC>("Draedon").Type, "The clanking of massive machines echoes in your ears...", spawnExoMechs);
-					spawnSCal = CheckSpawn(calamity.Find<ModNPC>("SupremeCalamitas").Type, "The brimstone witch is coming...", spawnSCal);
 				}
 
 				if (thorium != null)
@@ -318,7 +322,7 @@ namespace RandomSpawns
 		/// <returns>True if all conditions are met, otherwise otherwise false</returns>
 		private bool CheckSpawn(int npcType, string warnText, bool spawnBool)
 		{
-			if (spawnDict[npcType].Item1 && !spawnBool)
+			if (spawnDict[npcType].Item1 && !spawnBool && (!bossIsSpawning || spawnConfig.canMultipleSpawn))
 			{
 				if(calamity != null)
                 {
@@ -353,7 +357,9 @@ namespace RandomSpawns
 				{
 					ChatHelper.BroadcastChatMessage(NetworkText.FromLiteral(warnText), new Color(50, 255, 130));
 				}
-				return true;
+
+                bossIsSpawning = true;
+                return true;
 			}
 			return spawnBool;
 		}
@@ -373,9 +379,11 @@ namespace RandomSpawns
 
 			// Increment spawn timer by one
 			spawnDict[npcType] = new ValueTuple<bool, ValueTuple<int, int>>(spawnDict[npcType].Item1, (spawnDict[npcType].Item2.Item1 + 1, spawnDict[npcType].Item2.Item2));
-			if (spawnDict[npcType].Item2.Item1 >= (spawnConfig.waitAmount*60) && !NPC.AnyNPCs(npcType))
+			if (spawnDict[npcType].Item2.Item1 >= (spawnConfig.waitAmount*60) && !NPC.AnyNPCs(npcType)) // Spawn the boss
 			{
-				if(npcType == NPCID.DukeFishron) // Custom spawn logic for Duke Fishron
+                bossIsSpawning = false;
+
+                if (npcType == NPCID.DukeFishron) // Custom spawn logic for Duke Fishron
                 {
 					if(Main.netMode == NetmodeID.SinglePlayer) 
 					{

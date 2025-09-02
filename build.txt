@@ -1,4 +1,4 @@
 author = efcawesome
-version = 1.4.3
+version = 1.4.4
 displayName = Random Boss Spawns [Calamity Compatible]
 homepage = https://discord.gg/ZdNzyEg

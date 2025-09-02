@@ -132,6 +132,9 @@ namespace RandomSpawns
         public int spawnChance;
 
         [DefaultValue(false)]
+        public bool canMultipleSpawn;
+
+        [DefaultValue(false)]
         public bool canRespawn;
 
         [Header($"Header3")]

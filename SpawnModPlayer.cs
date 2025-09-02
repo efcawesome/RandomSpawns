@@ -81,7 +81,7 @@ namespace RandomSpawns
 				NPC.AnyNPCs(NPCID.SkeletronPrime) || NPC.AnyNPCs(NPCID.Retinazer) || NPC.AnyNPCs(NPCID.Spazmatism) || NPC.AnyNPCs(NPCID.TheDestroyer) ||
 				NPC.AnyNPCs(NPCID.Plantera) || NPC.AnyNPCs(NPCID.Golem) || NPC.AnyNPCs(NPCID.HallowBoss) || NPC.AnyNPCs(NPCID.CultistBoss) || NPC.AnyNPCs(NPCID.MoonLordCore) ||
 				//Calamity
-				(calamity != null ? NPC.AnyNPCs(calamity.Find<ModNPC>("DesertScourgeHead").Type) || NPC.AnyNPCs(calamity.Find<ModNPC>("Crabulon").Type) || NPC.AnyNPCs(calamity.Find<ModNPC>("HiveMind").Type) ||
+				(calamEnabled ? NPC.AnyNPCs(calamity.Find<ModNPC>("DesertScourgeHead").Type) || NPC.AnyNPCs(calamity.Find<ModNPC>("Crabulon").Type) || NPC.AnyNPCs(calamity.Find<ModNPC>("HiveMind").Type) ||
 				NPC.AnyNPCs(calamity.Find<ModNPC>("PerforatorHive").Type) || NPC.AnyNPCs(calamity.Find<ModNPC>("SlimeGodCore").Type) || NPC.AnyNPCs(calamity.Find<ModNPC>("Cryogen").Type) ||
 				NPC.AnyNPCs(calamity.Find<ModNPC>("AquaticScourgeHead").Type) || NPC.AnyNPCs(calamity.Find<ModNPC>("BrimstoneElemental").Type) || NPC.AnyNPCs(calamity.Find<ModNPC>("CalamitasClone").Type) ||
 				NPC.AnyNPCs(calamity.Find<ModNPC>("Anahita").Type) || NPC.AnyNPCs(calamity.Find<ModNPC>("AstrumAureus").Type) || NPC.AnyNPCs(calamity.Find<ModNPC>("PlaguebringerGoliath").Type) ||
@@ -93,7 +93,7 @@ namespace RandomSpawns
 				NPC.AnyNPCs(calamity.Find<ModNPC>("AresBody").Type) || NPC.AnyNPCs(calamity.Find<ModNPC>("Artemis").Type) || NPC.AnyNPCs(calamity.Find<ModNPC>("ThanatosHead").Type) ||
 				NPC.AnyNPCs(calamity.Find<ModNPC>("SupremeCalamitas").Type) : false) ||
 				//Thorium
-				(thorium != null ? NPC.AnyNPCs(thorium.Find<ModNPC>("TheGrandThunderBird").Type) || NPC.AnyNPCs(thorium.Find<ModNPC>("QueenJellyfish").Type) || NPC.AnyNPCs(thorium.Find<ModNPC>("Viscount").Type) ||
+				(thoriumEnabled ? NPC.AnyNPCs(thorium.Find<ModNPC>("TheGrandThunderBird").Type) || NPC.AnyNPCs(thorium.Find<ModNPC>("QueenJellyfish").Type) || NPC.AnyNPCs(thorium.Find<ModNPC>("Viscount").Type) ||
 				NPC.AnyNPCs(thorium.Find<ModNPC>("GraniteEnergyStorm").Type) || NPC.AnyNPCs(thorium.Find<ModNPC>("BuriedChampion").Type) || NPC.AnyNPCs(thorium.Find<ModNPC>("StarScouter").Type) ||
 				NPC.AnyNPCs(thorium.Find<ModNPC>("BoreanStrider").Type) || NPC.AnyNPCs(thorium.Find<ModNPC>("FallenBeholder").Type) || NPC.AnyNPCs(thorium.Find<ModNPC>("Lich").Type) ||
 				NPC.AnyNPCs(thorium.Find<ModNPC>("ForgottenOne").Type) || NPC.AnyNPCs(thorium.Find<ModNPC>("SlagFury").Type) || NPC.AnyNPCs(thorium.Find<ModNPC>("Aquaius").Type) ||
@@ -130,7 +130,7 @@ namespace RandomSpawns
 			EditSpawnDict(NPCID.MoonLordCore, canSpawnMoonLord);
 
 			// Calamity Mod boss conditions
-			if(calamity != null)
+			if(calamEnabled)
             {
 				canSpawnDesertScourge = (!isBossAlive && (Player.ZoneDesert || Player.ZoneUndergroundDesert) && Player.statDefense >= spawnConfig.desertScourgeMinDef && Player.statLifeMax2 >= spawnConfig.desertScourgeMinHP && NPC.downedSlimeKing && (!(bool)calamity.Call("GetBossDowned", "desertscourge") || spawnConfig.canRespawn) && !NPC.AnyNPCs(calamity.Find<ModNPC>("DesertScourgeHead").Type) && spawnConfig.desertScourgeEnabled);
 				EditSpawnDict(calamity.Find<ModNPC>("DesertScourgeHead").Type, canSpawnDesertScourge);
@@ -187,7 +187,7 @@ namespace RandomSpawns
 			}
 
 			// Thorium Mod boss conditions
-			if(thorium != null)
+			if(thoriumEnabled)
             {
 				canSpawnThunderBird = (!isBossAlive && spawnConfig.thunderBirdEnabled && Main.dayTime && Player.ZoneDesert && Player.statDefense >= spawnConfig.thunderBirdMinDef && Player.statLifeMax2 >= spawnConfig.thunderBirdMinHP && (!(bool)thorium.Call("GetDownedBoss", "TheGrandThunderBird") || spawnConfig.canRespawn) && !NPC.AnyNPCs(thorium.Find<ModNPC>("TheGrandThunderBird").Type));
 				EditSpawnDict(thorium.Find<ModNPC>("TheGrandThunderBird").Type, canSpawnThunderBird);
